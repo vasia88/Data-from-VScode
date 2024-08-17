@@ -13,8 +13,9 @@ function cleanInputString(str) {
 
 function isInvalidInput(str) {
   const regex = /\d+e\d+/i;
-return  str.match(regex);
+  return str.match(regex);
 }
-function isInvalidInput(str) {
-  const regex = /[0-9]+e[0-9]+/i;
+
+function addEntry() {
+const targetId
 }
