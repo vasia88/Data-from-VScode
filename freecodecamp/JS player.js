@@ -95,9 +95,10 @@ const playSong = (id) => {
   } else {
     audio.currentTime = userData?.songCurrentTime;
   }
-
   userData.currentSong = song;
+  playButton.classList.add("playing");
 
+  audio.play();
 };
 
 const renderSongs = (array) => {
@@ -122,6 +123,14 @@ const renderSongs = (array) => {
   playlistSongs.innerHTML = songsHTML;
 };
 
+playButton.addEventListener("click", () => {
+  if (userData?.currentSong === null) {
+    playSong(userData?.songs[0].id);
+  }else {
+    playSong(userData?.currentSong.id);
+  }
+});
+
 const sortSongs = () => {
   userData?.songs.sort((a,b) => {
     if (a.title < b.title) {
@@ -138,4 +147,5 @@ const sortSongs = () => {
   return userData?.songs;
 };
 
-renderSongs(sortSongs());
+
+renderSongs(userData?.songs);
