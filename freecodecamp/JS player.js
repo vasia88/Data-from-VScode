@@ -101,7 +101,10 @@ const playSong = (id) => {
   audio.play();
 };
 
+const pauseSong = () => {
+  userData.songCurrentTime = audio.currentTime;
 
+};
 
 const renderSongs = (array) => {
   const songsHTML = array
