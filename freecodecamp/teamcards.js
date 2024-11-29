@@ -6,8 +6,20 @@ const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
 const myFavoriteFootballTeam = {
   team: "Argentina",
-  sport:"Football",
-year: 1986,
-isWorldCupWinner:true,
-headCoach:
+  sport: "Football",
+  year: 1986,
+  isWorldCupWinner: true,
+  headCoach: {
+    coachName: "Carlos Bilardo",
+    matches: 7,
+  },
+  players: [
+{
+  name:
+position:
+number: 
+isCaptain:
+nickname: 
+}
+  ]
 };
