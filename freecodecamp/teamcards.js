@@ -222,7 +222,8 @@ playersDropdownList.addEventListener("change", (e) => {
       );
       break;
 
-
+case default:
+setPlayerCards()
 
   }
 });
