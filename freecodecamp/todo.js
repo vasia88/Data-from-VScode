@@ -13,6 +13,8 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
+
+
 const reset = () => {
   titleInput.value = "";
   dateInput.value = "";
@@ -27,7 +29,12 @@ openTaskFormBtn.addEventListener("click", () =>
 
 closeTaskFormBtn.addEventListener("click", () => {
   const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
-  confirmCloseDialog.showModal();
+
+  if (formInputsContainValues) {
+    confirmCloseDialog.showModal();
+  } else {
+    reset();
+  }
 });
 
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
