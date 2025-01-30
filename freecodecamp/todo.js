@@ -25,8 +25,9 @@ const addOrUpdateTask = () => {
   if (dataArrIndex === -1) {
     taskData.unshift(taskObj);
   }
-
-
+  
+  updateTaskContainer()
+  reset()
 };
 
 const updateTaskContainer = () => {
@@ -41,7 +42,7 @@ const updateTaskContainer = () => {
           <button type="button" class="btn">Delete</button>
         </div>
       `
-    } 
+    }
   );
 };
 
