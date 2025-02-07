@@ -64,8 +64,9 @@ const editTask = (buttonEl) => {
   );
 
   currentTask = taskData[dataArrIndex];
-  
-
+ titleInput.value = currentTask.title; 
+dateInput.value = currentTask.date;
+descriptionInput.value = currentTask.description
 }
 
 const reset = () => {
