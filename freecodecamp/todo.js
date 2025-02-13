@@ -24,8 +24,9 @@ const addOrUpdateTask = () => {
 
   if (dataArrIndex === -1) {
     taskData.unshift(taskObj);
+  } else {
+    taskData[dataArrIndex] = taskObj;
   }
-
 
   updateTaskContainer()
   reset()
@@ -89,6 +90,7 @@ openTaskFormBtn.addEventListener("click", () =>
 
 closeTaskFormBtn.addEventListener("click", () => {
   const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
+
   if (formInputsContainValues) {
     confirmCloseDialog.showModal();
   } else {
