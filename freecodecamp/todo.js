@@ -44,7 +44,7 @@ const updateTaskContainer = () => {
           <p><strong>Date:</strong> ${date}</p>
           <p><strong>Description:</strong> ${description}</p>
           <button onclick="editTask(this)" type="button" class="btn">Edit</button>
-          <button onclick="deleteTask(this)" type="button" class="btn">Delete</button> 
+          <button onclick="deleteTask(this)" type="button" class="btn">Delete</button>
         </div>
       `
     }
@@ -59,7 +59,7 @@ const deleteTask = (buttonEl) => {
 
   buttonEl.parentElement.remove();
   taskData.splice(dataArrIndex, 1);
-
+  localStorage.setItem("data", JSON.stringify(taskData));
 }
 
 const editTask = (buttonEl) => {
@@ -75,7 +75,7 @@ const editTask = (buttonEl) => {
 
   addOrUpdateTaskBtn.innerText = "Update Task";
 
-  taskForm.classList.toggle("hidden");  
+  taskForm.classList.toggle("hidden");
 }
 
 const reset = () => {
