@@ -3,7 +3,13 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-  return "01110110";
+  const inputs = [];
+  const quotients = [];
+  const remainders = [];
+
+  input = 0;
+
+  
 };
 
 const checkUserInput = () => {
@@ -11,39 +17,7 @@ const checkUserInput = () => {
     !numberInput.value ||
     isNaN(parseInt(numberInput.value)) ||
     parseInt(numberInput.value) < 0
-  ) {const numberInput = document.getElementById("number-input");
-    const convertBtn = document.getElementById("convert-btn");
-    const result = document.getElementById("result");
-    
-    const decimalToBinary = (input) => {
-      const inputs = [];
-      const quotients = [];
-      const remainders = [];
-    
-      
-    };
-    
-    const checkUserInput = () => {
-      if (
-        !numberInput.value ||
-        isNaN(parseInt(numberInput.value)) ||
-        parseInt(numberInput.value) < 0
-      ) {
-        alert("Please provide a decimal number greater than or equal to 0");
-        return;
-      }
-    
-      decimalToBinary(parseInt(numberInput.value));
-      numberInput.value = "";
-    };
-    
-    convertBtn.addEventListener("click", checkUserInput);
-    
-    numberInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        checkUserInput();
-      }
-    });
+  ) {
     alert("Please provide a decimal number greater than or equal to 0");
     return;
   }
